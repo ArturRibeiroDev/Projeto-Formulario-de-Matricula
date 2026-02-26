@@ -42,6 +42,7 @@ img {
 
 .flex {
   display: flex;
+  flex-direction: column;
 }
 
 .flex-1 {
@@ -49,5 +50,35 @@ img {
 }
 
 .flex-2 {
-  flex:2;
+  flex:1;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.phone-only {
+  display: initial;
+}
+
+@media (width >= 80em) {
+  .desktop-only {
+    display: initial;
+  }
+
+  .phone-only {
+    display: none;
+  }
+  .flex {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .flex-1 {
+    flex:1;
+}
+
+  .flex-2 {
+    flex:2;
+}
 }

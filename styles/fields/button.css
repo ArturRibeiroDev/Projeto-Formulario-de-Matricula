@@ -19,10 +19,29 @@ button {
   &.btn-secondary {
     margin-left: auto;
     border: 1px solid var(--text-highlight);
+    width: 275px;
 
     &:hover, &:focus-within {
       color: #E43A12;
       outline: 0.25rem solid var(--surface-secondary);
     }
   }
+}
+
+.actions-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+ 
+@media (width >= 80em) {
+  .actions-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .btn-secondary {
+    margin-left: auto;
+    border: 1px solid var(--text-highlight);
+    max-width: 130px;
+
+}
 }
